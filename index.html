@@ -46,27 +46,24 @@
 						<!-- proiecte -->
 							<article id="proiecte">
 								<h2 class="major">proiecte</h2>
-
 								<button class="buton1" onClick="document.getElementById('radical').scrollIntoView();"><i class="fas fa-square-root-alt"></i> Radical</button>
 								<button class="buton2" onClick="document.getElementById('cmmdc').scrollIntoView();"><i class="fas fa-angle-right"></i> CMMDC/CMMMC</button>
 								<button class="buton3" onClick="document.getElementById('medii').scrollIntoView();"><i class="fas fa-wave-square"></i> medii</button>
 								<style>
 								#butonsus {
-								  position: fixed;
-								  bottom: 7px;
-								  right: 30px;
+								  /* position: fixed; */
+									display: flex; justify-content: center;
+									bottom: 10px;
+									/* width: 40%; */
 								}
 								</style>
-								<div id="butonsus">
-										<button class="sus" onClick="document.getElementById('wrapper').scrollIntoView();"><i class="fas fa-angle-double-up"></i>Sus</button>
-								</div>
 								<p> </p>
 								<div id="radical">
 								<h3>Program pentru scoaterea factorilor de sub radical:</h3>
 								<p>Exemplu: radical din 48 este egal cu 4 radical din 3.</p><p>
 								</p><p id="sout"></p>
 								<h4>Numarul de sub radical: </h4>
-								<input type="text" name="Numarul sub radical:" id="inputnr"> <h4></h4>
+								<input type="text" name="Numarul sub radical:" id="inputnr"> <h4> </h4>
 								<button onclick="sdsr()" id="buton0">Trimite</button>
 								<script>
 								var input = document.getElementById("inputnr");
@@ -176,6 +173,8 @@
 								<h4>Al doilea numar:</h4>
 								<input type="text" name="al doilea" id="inputdoi"> <h4></h4>
 								<button onclick="medie()" id="buton2">Trimite</button>
+								<p>&nbsp;</p>
+								<!-- <p>&nbsp;</p> -->
 								<script>
 								var input = document.getElementById("inputdoi");
 								input.addEventListener("keyup", function(event) {
@@ -205,6 +204,9 @@
 								}
 								}
 								</script>
+							</div>
+							<div id="butonsus" style="text-align:center;">
+									<button class="sus" onClick="document.getElementById('wrapper').scrollIntoView();"><i class="fas fa-angle-double-up"></i>Sus</button>
 							</div>
 							</article>
 
