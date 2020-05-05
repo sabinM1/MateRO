@@ -6,16 +6,6 @@
 -->
 <html>
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151588253-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
- 		 function gtag(){dataLayer.push(arguments);}
- 		 gtag('js', new Date());
- 		 gtag('config', 'UA-151588253-1');
-		</script>
-		
-		<html lang="ro">
 		<title>Mate-Romania</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -56,6 +46,22 @@
 						<!-- proiecte -->
 							<article id="proiecte">
 								<h2 class="major">proiecte</h2>
+
+								<button class="buton1" onClick="document.getElementById('radical').scrollIntoView();"><i class="fas fa-square-root-alt"></i> Radical</button>
+								<button class="buton2" onClick="document.getElementById('cmmdc').scrollIntoView();"><i class="fas fa-angle-right"></i> CMMDC/CMMMC</button>
+								<button class="buton3" onClick="document.getElementById('medii').scrollIntoView();"><i class="fas fa-wave-square"></i> medii</button>
+								<style>
+								#butonsus {
+								  position: fixed;
+								  bottom: 7px;
+								  right: 30px;
+								}
+								</style>
+								<div id="butonsus">
+										<button class="sus" onClick="document.getElementById('wrapper').scrollIntoView();"><i class="fas fa-angle-double-up"></i>Sus</button>
+								</div>
+								<p> </p>
+								<div id="radical">
 								<h3>Program pentru scoaterea factorilor de sub radical:</h3>
 								<p>Exemplu: radical din 48 este egal cu 4 radical din 3.</p><p>
 								</p><p id="sout"></p>
@@ -112,7 +118,9 @@
 								}
 								}
 								</script>
-								<p></p>
+							</div>
+								<p> </p>
+							<div id="cmmdc">
 								<h3>Program pentru aflarea CMMDC si CMMMC a doua numere:</h3>
 								<p>Exemplu: CMMDC si CMMMC pentru numerele 36 si 24 este 12, respectiv, 72.</p>
 								<p id="sout2"></p>
@@ -155,7 +163,9 @@
 								}
 								}
 								</script>
-								<p></p>
+							</div>
+								<p> </p>
+								<div id="medii">
 								<h3>Program pentru aflarea mediilor: aritmetice, geometrice, armonoice si patratice:</h3>
 								<p>Exemplu: Pentru numerele 2 si 200, ma=101, mg=20, mh=3.9603 si mp=141.4284.</p><p>
 								</p><p id="sout3"></p>
@@ -166,9 +176,7 @@
 								<h4>Al doilea numar:</h4>
 								<input type="text" name="al doilea" id="inputdoi"> <h4></h4>
 								<button onclick="medie()" id="buton2">Trimite</button>
-
 								<script>
-
 								var input = document.getElementById("inputdoi");
 								input.addEventListener("keyup", function(event) {
 								  if (event.keyCode === 13) {
@@ -197,6 +205,7 @@
 								}
 								}
 								</script>
+							</div>
 							</article>
 
 						<!-- despre -->
@@ -227,7 +236,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; 2020 Mate-Romania. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-						<p class="copyright"> Background: <a href="https://unsplash.com/@giamboscaro">Giammarco Boscaro</a>.</p>
+						<p class="copyright"> Background: <a href="https://unsplash.com/@giamboscaro">Giammarco Boscaro</a>.<p/>
 					</footer>
 
 			</div>
