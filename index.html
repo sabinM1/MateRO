@@ -79,10 +79,10 @@
 								aux1=0; aux2=1;
 								n=document.getElementById("inputnr").value;
 								if(isNaN(n))
-								document.getElementById("sout").innerHTML="Rezultat: Scrie un numar format din <b>cifre!";
+								document.getElementById("sout").innerHTML="<b>Rezultat:</b><br> Scrie un numar format din <b>cifre</b>!";
 								else
 								if(n==0)
-								document.getElementById("sout").innerHTML="Rezultat: Numarul cu radical este egal cu 0 (radical din 0 este egal cu 0).";
+								document.getElementById("sout").innerHTML="<b>Rezultat:</b><br> Numarul cu radical este egal cu 0 (radical din 0 este egal cu 0).";
 								else
 								{
 								n2=n;
@@ -105,12 +105,12 @@
 								}
 								n=n2/(aux2*aux2);
 								if(aux2!=1 && n!=1)
-								var sir="Rezultat: Numarul cu radical este egal cu " + aux2 + " radical din " + n + ".";
+								var sir="<b>Rezultat:</b><br> Numarul cu radical este egal cu " + aux2 + " radical din " + n + ".";
 								else
 								if(aux2!=1)
-								var sir="Rezultat: Numarul cu radical este egal cu " + aux2 + ".";
+								var sir="<b>Rezultat:</b><br> Numarul cu radical este egal cu " + aux2 + ".";
 								else
-								var sir="Rezultat: Numarul de sub radical este compus din numere prime, deci rezultatul este numarul initial, radical din " + n + ".";
+								var sir="<b>Rezultat:</b><br> Numarul de sub radical este compus din numere prime, deci rezultatul este numarul initial, radical din " + n + ".";
 								document.getElementById("sout").innerHTML=sir;
 								}
 								}
@@ -142,10 +142,10 @@
 								a=document.getElementById("inputnr1").value;
 								b=document.getElementById("inputnr2").value;
 								if(isNaN(a) || isNaN(b))
-								document.getElementById("sout2").innerHTML="Rezultat: Scrie un numar format din  <b>cifre!";
+								document.getElementById("sout2").innerHTML="<b>Rezultat:</b><br> Scrie un numar format din  <b>cifre</b>!";
 								else
 								if(a==0 && b==0)
-								document.getElementById("sout2").innerHTML="Rezultat: CMMDC=0, iar CMMMC=0.";
+								document.getElementById("sout2").innerHTML="<b>Rezultat:</b><br> CMMDC=0; <br>CMMMC=0.";
 								else
 								{
 								m=a*b;
@@ -155,7 +155,7 @@
 									b=a%b;
 									a=t;
 								}
-								var sir="Rezultat: CMMDC=" + a + ", iar CMMMC=" + m/a + ".";
+								var sir="<b>Rezultat:</b><br> CMMDC=" + a + ";<br>CMMMC=" + m/a + ".";
 								document.getElementById("sout2").innerHTML=sir;
 								}
 								}
@@ -189,7 +189,7 @@
 								nr1=document.getElementById("inputunu").value;
 								nr2=document.getElementById("inputdoi").value;
 								if(isNaN(nr1) || isNaN(nr2))
-								document.getElementById("sout3").innerHTML="Rezultat: Numerele sunt formate din <b>cifre!";
+								document.getElementById("sout3").innerHTML="<b>Rezultat:</b> Numerele sunt formate din <b>cifre</b>!";
 								else
 								{
 								ma=(Number(nr1)+Number(nr2))/2;
@@ -199,7 +199,7 @@
 								mh=0;
 								mp=Math.sqrt((nr1*nr1+nr2*nr2)/2);
 								mg=Math.sqrt(Math.abs((nr1*nr2)));
-								var sir="Rezultat: Pentru cele doua numere ma=" + ma + ", mg=" + mg + ", mh=" + mh + " si mp=" + mp + ".";
+								var sir="<b>Rezultat:</b> <br> Media Aritmetica: " + ma + "; <br> Media Geometrica: " + mg + "; <br> Media Armonica: " + mh + "; <br> Media Patratica: " + mp + ".";
 								document.getElementById("sout3").innerHTML=sir;
 								}
 								}
