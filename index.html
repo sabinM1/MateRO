@@ -48,7 +48,8 @@
 								<h2 class="major">proiecte</h2>
 								<button class="buton1" onClick="document.getElementById('radical').scrollIntoView();"><i class="fas fa-square-root-alt"></i> Radical</button>
 								<button class="buton2" onClick="document.getElementById('cmmdc').scrollIntoView();"><i class="fas fa-angle-right"></i> CMMDC/CMMMC</button>
-								<button class="buton3" onClick="document.getElementById('medii').scrollIntoView();"><i class="fas fa-wave-square"></i> medii</button>
+								<button class="buton3" onClick="document.getElementById('medii').scrollIntoView();"><i class="fas fa-wave-square"></i> Medii</button>
+								<button class="buton4" onClick="document.getElementById('permutari').scrollIntoView();"><i class="fas fa-memory"></i> Permutari</button>
 								<style>
 								#butonsus {
 								  /* position: fixed; */
@@ -60,7 +61,7 @@
 								<p> </p>
 								<div id="radical">
 								<h3>Program pentru scoaterea factorilor de sub radical:</h3>
-								<p>Exemplu: radical din 48 este egal cu 4 radical din 3.</p><p>
+								<p>Exemplu: radical din <i>48</i> este egal cu 4 radical din 3.</p><p>
 								</p><p id="sout"></p>
 								<h4>Numarul de sub radical: </h4>
 								<input type="text" name="Numarul sub radical:" id="inputnr"> <h4> </h4>
@@ -119,14 +120,14 @@
 								<p> </p>
 							<div id="cmmdc">
 								<h3>Program pentru aflarea CMMDC si CMMMC a doua numere:</h3>
-								<p>Exemplu: CMMDC si CMMMC pentru numerele 36 si 24 este 12, respectiv, 72.</p>
+								<p>Exemplu: CMMDC si CMMMC pentru numerele <i>36</i> si <i>24</i> este 12, respectiv, 72.</p>
 								<p id="sout2"></p>
 								<h4>Primul numar:</h4>
 								<input type="text" name="primulnr" id="inputnr1">
 								<pre>
 								</pre>
 								<h4>Al doilea numar:</h4>
-								<input type="text" name="aldoileanr" id="inputnr2"> <h4></h4>
+								<input type="text" name="aldoileanr" id="inputnr2"> <h4> </h4>
 								<button onclick="cmm_c()" id="buton1">Trimite</button>
 								<script>
 								var input2 = document.getElementById("inputnr2");
@@ -164,14 +165,14 @@
 								<p> </p>
 								<div id="medii">
 								<h3>Program pentru aflarea mediilor: aritmetice, geometrice, armonoice si patratice:</h3>
-								<p>Exemplu: Pentru numerele 2 si 200, ma=101, mg=20, mh=3.9603 si mp=141.4284.</p><p>
+								<p>Exemplu: Pentru numerele <i>2</i> si <i>200</i>, ma=101, mg=20, mh=3.9603 si mp=141.4284.</p><p>
 								</p><p id="sout3"></p>
 								<h4>Primul numar:</h4>
 								<input type="text" name="primul" id="inputunu">
 								<pre>
 								</pre>
 								<h4>Al doilea numar:</h4>
-								<input type="text" name="al doilea" id="inputdoi"> <h4></h4>
+								<input type="text" name="al doilea" id="inputdoi"> <h4> </h4>
 								<button onclick="medie()" id="buton2">Trimite</button>
 								<p>&nbsp;</p>
 								<!-- <p>&nbsp;</p> -->
@@ -204,6 +205,41 @@
 								}
 								}
 								</script>
+							</div>
+							<div id=permutari>
+								<p> </p>
+ 							 <h3>Numarul maxim de permutari al unui sir:</h3>
+ 							 <p>Exemplu: <i>175</i> are maxim 6 permutari, iar <i>ABCD</i> are 24.</p><p>
+ 							 </p><p id="sout4"></p>
+ 							 <h4>Sirul:</h4>
+ 							 <input type="text" name="primul" id="input1"> <h4> </h4>
+							 <button onclick="len()" id="butonn">Trimite</button>
+								<script>
+								var inputt = document.getElementById("input1");
+								inputt.addEventListener("keyup", function(event) {
+								  if (event.keyCode === 13) {
+								   event.preventDefault();
+								   document.getElementById("butonn").click();
+								  }
+								});
+								function fact(n)
+								{
+									var ans=1;
+            		 for (var i = 2; i <= n; i++)
+                 	{ans = ans * i;}
+									return ans;
+								}
+								function len()
+								{
+								nr1=document.getElementById("input1").value;
+								var in_len = nr1.length;
+								if (in_len<2)
+								var sir="<b>Rezultat:</b> <br> Sirul nu are permutari, este un singur caracter.";
+								else
+								var sir="<b>Rezultat:</b> <br> Sirul are maxim " + fact(in_len) + " permutari.";
+								document.getElementById("sout4").innerHTML=sir;
+							  }
+							 </script>
 							</div>
 							<div id="butonsus" style="text-align:center;">
 									<button class="sus" onClick="document.getElementById('wrapper').scrollIntoView();"><i class="fas fa-angle-double-up"></i>Sus</button>
