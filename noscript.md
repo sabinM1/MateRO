@@ -1,0 +1,1 @@
+<h2>Va rugam sa <b>activati JavaScript</b> pentru a va bucura de toate functiile site-ului. <br> Nu stiti cum se activeaza? Consultati pagina <a href="https://enable-javascript.com/">Enable-JavaScript</a>.</h2><br>
