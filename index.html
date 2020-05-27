@@ -7,9 +7,11 @@
 <html>
 
 <head>
+	<meta charset="utf-8" />
 	<noscript>
 		<meta http-equiv="refresh" content="0;url=noscript">
 	</noscript>
+	<script src="./blockadblock.js"></script>
 	<script src="https://cmp.osano.com/AzyvzaRzZ7xfB20GR/3217f3a3-7d23-4f3b-b2ca-06db837b8638/osano.js"></script>
 	<!-- Google Tag Manager -->
 	<script>
@@ -32,7 +34,6 @@
 	</script>
 	<!-- End Google Tag Manager -->
 	<title>Mate-Romania</title>
-	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
@@ -322,28 +323,33 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-
 				<p> Pentru contact, sugestii sau raportare de bug-uri va rugam sa completati formularul de mai jos sau sa ne contactati la una dintre platformele de sub formular. </p>
-				<form method="POST" action="https://formspree.io/xgenalbw">
-					<div class="fields">
-						<div class="field half">
-							<label for="name">Nume complet</label>
-							<input type="text" name="name" id="name" />
+
+				<div id="adb_detect">
+					<h3> ATENTIE! Pentru functionarea optima a formularului va rugam sa dezactivati orice metoda de blocare a script-urilor si/sau reclamelor, asta nu inseamna ca avem reclame pe site! Nu avem! </h3>
+				</div>
+				<div id="formm">
+					<form method="POST" action="https://formspree.io/xgenalbw">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Nume complet</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Mesaj</label>
+								<textarea name="message" id="message" rows="4"></textarea>
+							</div>
 						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Mesaj</label>
-							<textarea name="message" id="message" rows="4"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Trimite" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
-					</ul>
-				</form>
+						<ul class="actions">
+							<li><input type="submit" value="Trimite" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</div>
 				<ul class="icons">
 					<li><a href="https://github.com/sabinM1" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 					<li><a href="https://www.reddit.com/user/sabin_M1" class="icon brands fa-reddit-alien"><span class="label">Reddit</span></a></li>
@@ -371,7 +377,57 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		// Function called if AdBlock is not detected
+		function adBlockNotDetected()
+		{
+			// alert('AdBlock is not enabled');
+			$(function()
+			{
+				$('#adb_detect').hide();
+			});
+		}
+		// Function called if AdBlock is detected
+		function adBlockDetected()
+		{
+			$(function()
+			{
+				$('#adb_detect').show();
+				$('#formm').hide();
+			});
+			// alert('AdBlock is enabled');
+		}
 
+		// We look at whether FuckAdBlock already exists.
+		if (typeof fuckAdBlock !== 'undefined' || typeof FuckAdBlock !== 'undefined')
+		{
+			// If this is the case, it means that something tries to usurp are identity
+			// So, considering that it is a detection
+			adBlockDetected();
+		}
+		else
+		{
+			// Otherwise, you import the script FuckAdBlock
+			var importFAB = document.createElement('script');
+			importFAB.onload = function()
+			{
+				// If all goes well, we configure FuckAdBlock
+				fuckAdBlock.onDetected(adBlockDetected)
+				fuckAdBlock.onNotDetected(adBlockNotDetected);
+			};
+			importFAB.onerror = function()
+			{
+				// If the script does not load (blocked, integrity error, ...)
+				// Then a detection is triggered
+				adBlockDetected();
+			};
+			importFAB.integrity = 'sha256-xjwKUY/NgkPjZZBOtOxRYtK20GaqTwUCf7WYCJ1z69w=';
+			importFAB.crossOrigin = 'anonymous';
+			importFAB.src = 'https://cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js';
+			document.head.appendChild(importFAB);
+		}
+	</script>
+	<!-- ^^ad detection, there are no ads, see the first comment in the blockadblock.js file -->
 </body>
 
 </html>
