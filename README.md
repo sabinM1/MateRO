@@ -18,7 +18,7 @@ Cookie consent by [Osano](https://www.osano.com/); <br>
 Website uptime with [GitHub Actions](https://github.com/features/actions), [Uptime Action](https://github.com/marketplace/actions/uptime-action); <br>
 Analytics provided by [Google Analytics](https://analytics.google.com/analytics/web/) with [Google Tag Manager](https://tagmanager.google.com/); <br>
 Form action (because GitHub Pages are [static](https://en.wikipedia.org/wiki/Static_web_page)) by [Formspree](https://formspree.io/); <br>
-[BlockAdBlock](https://fuckadblock.sitexw.fr/blockadblock/) (the site doesn't actually have any ads, see [blockadblock.js](https://github.com/sabinM1/MateRO/blob/master/blockadblock.js) and/or commit [`3f04abc`](https://github.com/sabinM1/MateRO/commit/3f04abc5ebb52e8fedfdb00a2d06bb119f9c8e55). Also the [comment](https://github.com/sabinM1/MateRO/commit/3f04abc5ebb52e8fedfdb00a2d06bb119f9c8e55#commitcomment-39481712) on the commit.<br>
+~~BlockAdBlock (the site doesn't actually have any ads, see blockadblock.js and/or commit `3f04abc`. Also the comment on the commit.~~ BlockAdBlock no longer needed due to my stupid form testing. Please ignore.<br>
 
 ##### <b>Note:</b> Other [assets](https://github.com/sabinM1/MateRO/tree/master/assets) and [images](https://github.com/sabinM1/MateRO/tree/master/images) are located in their respective folders on the default, master, branch.
 
