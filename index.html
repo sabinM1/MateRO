@@ -80,6 +80,7 @@
         <button class="buton2" onClick="document.getElementById('cmmdc').scrollIntoView();"><i class="fas fa-angle-right"></i> CMMDC/CMMMC</button> &nbsp;
         <button class="buton3" onClick="document.getElementById('medii').scrollIntoView();"><i class="fas fa-wave-square"></i> Medii</button> &nbsp;
         <button class="buton4" onClick="document.getElementById('permutari').scrollIntoView();"><i class="fas fa-memory"></i> Permutari</button> &nbsp;
+        <button class="buton5" onClick="document.getElementById('factoriprimi').scrollIntoView();"><i class="fas fa-sort"></i> Descompunere</button> &nbsp;
         <style>
           #butonsus {
             /* position: fixed; */
@@ -298,6 +299,79 @@
             }
           </script>
         </div>
+        <!-- nou -->
+        <div id=factoriprimi>
+          <p> </p>
+          <h3>Descompunerea in factori primi a unui numar natural:</h3>
+          <p>Exemplu: <i>1600</i> = 2<sup>6</sup> * 5<sup>2</sup>.</p>
+          <p>
+          </p>
+          <p id="sout5"></p>
+          <h4>Numarul:</h4>
+          <input type="text" name="primul" id="inputul">
+          <h4> </h4>
+          <button onclick="factorip()" id="butonp">Trimite</button>
+          <script>
+            var inputt = document.getElementById("inputul");
+            inputt.addEventListener("keyup", function(event)
+            {
+              if (event.keyCode === 13)
+              {
+                event.preventDefault();
+                document.getElementById("butonp").click();
+              }
+            });
+
+            function factorip()
+            {
+              n = document.getElementById("inputul").value;
+              var d = 2;
+              var sirwhile = n + " = " + "<b>";
+              var booltemp = 0;
+              var naux = n;
+              if (n) //daca e undefined, null, empty string, 0, NaN, fals nu va intra in if
+              {
+                while (n > 1)
+                {
+                  var p = 0;
+                  while (n % d === 0)
+                  {
+                    p++;
+                    n = n / d;
+                  }
+                  if (p > 0)
+                  {
+                    switch (booltemp)
+                    {
+                      case 0:
+                        sirwhile = sirwhile + d + "<sup>" + p + "</sup>";
+                        booltemp = 1;
+                        break;
+                      case 1:
+                        sirwhile = sirwhile + " * " + d + "<sup>" + p + "</sup>";
+                        break;
+                      default:
+                        sirwhile = sirwhile + d + "<sup>" + p + "</sup>";
+                    }
+                  }
+                  d++;
+                }
+              }
+              if (isNaN(naux))
+                var sir = "<b>Rezultat:</b> <br> Numerele sunt formate din <b>cifre</b>!";
+              else if (naux <= -1)
+                var sir = "<b>Rezultat:</b> <br> Scrie numere <b>pozitive</b>!"
+              else if (naux < 1)
+                var sir = "<b>Rezultat:</b> <br> Numarul 0 = <b>0</b>.";
+              else if (naux < 2)
+                var sir = "<b>Rezultat:</b> <br> Numarul 1 = <b>1</b>.";
+              else
+                var sir = "<b>Rezultat:</b> <br> Numarul " + sirwhile + "</b>.";
+              document.getElementById("sout5").innerHTML = sir;
+            }
+          </script>
+        </div>
+        <!-- END nou -->
         <div id="butonsus" style="text-align:center;">
           <button class="sus" onClick="document.getElementById('wrapper').scrollIntoView();"><i class="fas fa-angle-double-up"></i>Sus</button>
         </div>
