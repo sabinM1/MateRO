@@ -1,6 +1,6 @@
 
 ## Mate Romania
-[![Uptime Monitor](https://github.com/sabinM1/MateRO/workflows/Uptime%20Monitor/badge.svg)](https://github.com/sabinM1/MateRO/actions?query=workflow%3A%22Uptime+Monitor%22) [![GitHub last commit](https://img.shields.io/github/last-commit/sabinM1/MateRO)](https://github.com/sabinM1/MateRO/commits/master) [![GitHub](https://img.shields.io/github/license/sabinM1/Matero)](https://github.com/sabinM1/MateRO/blob/master/LICENSE)  [![GitHub deployments](https://img.shields.io/github/deployments/sabinM1/MateRO/Github-Pages?label=GitHub%20Pages)](https://github.com/sabinM1/MateRO/deployments) [![GitHub repo size](https://img.shields.io/github/repo-size/sabinM1/MateRO)](https://github.com/sabinM1/MateRO) 
+[![GitHub last commit](https://img.shields.io/github/last-commit/sabinM1/MateRO)](https://github.com/sabinM1/MateRO/commits/master) [![GitHub](https://img.shields.io/github/license/sabinM1/Matero)](https://github.com/sabinM1/MateRO/blob/master/LICENSE)  [![GitHub deployments](https://img.shields.io/github/deployments/sabinM1/MateRO/Github-Pages?label=GitHub%20Pages)](https://github.com/sabinM1/MateRO/deployments) [![GitHub repo size](https://img.shields.io/github/repo-size/sabinM1/MateRO)](https://github.com/sabinM1/MateRO) 
 
 ---
 ### About
