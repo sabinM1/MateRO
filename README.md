@@ -5,7 +5,7 @@
 ---
 ### About
 ##### <b>Note:</b> This is just a translated part of the [Despre](https://sabinm1.github.io/MateRO/#despre) (About) section on the site. <br> <br>
-[Mate-Romania.tech](https://sabinm1.github.io/MateRO) is a website founded by Maxim Sabin with the purpose to help students in classes from 5 to 8 in Romania with boring and repetitive formulas found in mathematics using algorithms that do all the unnecessary work. <br>
+[Mate-Romania](https://sabinm1.github.io/MateRO) is a website founded by Maxim Sabin with the purpose to help students in classes from 5 to 8 in Romania with boring and repetitive formulas found in mathematics using algorithms that do all the unnecessary work. <br>
 <br> The project's main scope is to encourage students to work on more complex problems that are unique and to decrease of learning strictly by book. The other scope would be my personal development in HTML/CSS/JS and other related frameworks/platforms.
 
 ---
